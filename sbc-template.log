@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  17 AUG 2015 03:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  22 AUG 2015 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -134,12 +134,6 @@ LaTeX Warning: Label `tab:exTable1' multiply defined.
 
 
 LaTeX Warning: Label `tab:exTable1' multiply defined.
-
-
-LaTeX Warning: Label `tab:exTable1' multiply defined.
-
-
-LaTeX Warning: Label `fig:exampleFig2' multiply defined.
 
 
 LaTeX Warning: Label `tab:exTable1' multiply defined.
@@ -302,32 +296,32 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
  [3] [4 <./chronos.png>] <table.jpg, id=25, 365.2044pt x 217.2918pt>
 File: table.jpg Graphic file (type jpg)
  <use table.jpg>
-Package pdftex.def Info: table.jpg used on input line 111.
+Package pdftex.def Info: table.jpg used on input line 109.
 (pdftex.def)             Requested size: 298.75264pt x 177.75932pt.
  [5]
 <modelo-tradicionalxchronos.png, id=29, 671.50874pt x 234.8775pt>
 File: modelo-tradicionalxchronos.png Graphic file (type png)
 
 <use modelo-tradicionalxchronos.png>
-Package pdftex.def Info: modelo-tradicionalxchronos.png used on input line 127.
+Package pdftex.def Info: modelo-tradicionalxchronos.png used on input line 125.
 
 (pdftex.def)             Requested size: 384.1096pt x 134.35106pt.
  [6 <./table.jpg> <./modelo-tradicionalxchronos.png>] <processo.PNG, id=34, 484
 .05844pt x 368.87813pt>
 File: processo.PNG Graphic file (type png)
  <use processo.PNG>
-Package pdftex.def Info: processo.PNG used on input line 141.
+Package pdftex.def Info: processo.PNG used on input line 139.
 (pdftex.def)             Requested size: 341.43437pt x 260.19981pt.
 
 <tela-app.png, id=35, 1284.8pt x 1003.75pt>
 File: tela-app.png Graphic file (type png)
  <use tela-app.png>
-Package pdftex.def Info: tela-app.png used on input line 152.
+Package pdftex.def Info: tela-app.png used on input line 150.
 (pdftex.def)             Requested size: 384.1096pt x 300.08583pt.
  [7 <./processo.PNG>] <estrutura.png, id=41, 972.63374pt x 284.56313pt>
 File: estrutura.png Graphic file (type png)
  <use estrutura.png>
-Package pdftex.def Info: estrutura.png used on input line 166.
+Package pdftex.def Info: estrutura.png used on input line 164.
 (pdftex.def)             Requested size: 384.1096pt x 112.37732pt.
 
 [8 <./tela-app.png> <./estrutura.png>]
@@ -335,38 +329,22 @@ Package pdftex.def Info: estrutura.png used on input line 166.
 File: tabela-atividade.PNG Graphic file (type png)
 
 <use tabela-atividade.PNG>
-Package pdftex.def Info: tabela-atividade.PNG used on input line 185.
+Package pdftex.def Info: tabela-atividade.PNG used on input line 183.
 (pdftex.def)             Requested size: 341.43437pt x 96.17355pt.
  <stakeholder1.PNG, id=48, 289.83281pt x 78.2925pt>
 File: stakeholder1.PNG Graphic file (type png)
 
 <use stakeholder1.PNG>
-Package pdftex.def Info: stakeholder1.PNG used on input line 194.
+Package pdftex.def Info: stakeholder1.PNG used on input line 192.
 (pdftex.def)             Requested size: 341.43437pt x 92.23738pt.
  <stake2.PNG, id=49, 289.83281pt x 79.79813pt>
 File: stake2.PNG Graphic file (type png)
 
 <use stake2.PNG>
-Package pdftex.def Info: stake2.PNG used on input line 203.
+Package pdftex.def Info: stake2.PNG used on input line 201.
 (pdftex.def)             Requested size: 341.43437pt x 94.01118pt.
- [9 <./tabela-atividade.PNG>] [10 <./stakeholder1.PNG> <./stake2.PNG>] <fig1.jp
-g, id=59, 254.3904pt x 232.2276pt>
-File: fig1.jpg Graphic file (type jpg)
- <use fig1.jpg>
-Package pdftex.def Info: fig1.jpg used on input line 263.
-(pdftex.def)             Requested size: 213.39568pt x 194.81471pt.
-
-<fig2.jpg, id=60, 205.7286pt x 234.1548pt>
-File: fig2.jpg Graphic file (type jpg)
- <use fig2.jpg>
-Package pdftex.def Info: fig2.jpg used on input line 270.
-(pdftex.def)             Requested size: 128.0387pt x 145.73541pt.
-File: table.jpg Graphic file (type jpg)
- <use table.jpg>
-Package pdftex.def Info: table.jpg used on input line 288.
-(pdftex.def)             Requested size: 298.75264pt x 177.75932pt.
-
-[11] (./sbc-template.bbl [12 <./fig1.jpg> <./fig2.jpg>]
+ [9 <./tabela-atividade.PNG>] [10 <./stakeholder1.PNG> <./stake2.PNG>] (./sbc-t
+emplate.bbl
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 64.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
@@ -374,20 +352,20 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
-) [13]
+ [11]) [12]
 (./sbc-template.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2775 strings out of 493091
- 39821 string characters out of 6134964
- 113070 words of memory out of 5000000
- 6199 multiletter control sequences out of 15000+600000
+ 2763 strings out of 493091
+ 39676 string characters out of 6134964
+ 113051 words of memory out of 5000000
+ 6189 multiletter control sequences out of 15000+600000
  22618 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,28p,1177b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,28p,1579b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
@@ -397,10 +375,10 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on sbc-template.pdf (13 pages, 551204 bytes).
+Output written on sbc-template.pdf (12 pages, 480170 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
