@@ -1,0 +1,313 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+%\usepackage[brazil]{babel}   
+\usepackage[latin1]{inputenc}  
+
+     
+\sloppy
+
+\title{ChronosPM - Sistema de recomendação de alocação de recursos humanos e priorização de atividades automatizadas em projetos de desenvolvimento de software}
+
+\author{Gustavo das Neves\inst{1} }
+
+
+\address{Faculdade CNEC Gravataí\\
+  Caixa Postal 15.064 -- 91.501-970 -- Gravataí -- RS -- Brazil
+\nextinstitute
+  Department of Computer Science -- University of Durham\\
+  Durham, U.K.
+\nextinstitute
+  Departamento de Sistemas e Computação\\
+  Universidade Regional de Blumenal (FURB) -- Blumenau, SC -- Brazil
+  \email{gustavo.nevesgn@gmail.com}
+}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+  This article describes the model of human resource allocation recommendation system and prioritizing tasks in software development projects that aims to assist project managers in decision making related to the allocation of activities based on the profile of stakeholders in order to obtain better results in execution of project activities. A survey conducted for the implementation of ChronosPM system encompasses project management topics, theory of constraints and development technologies such as PHP programming language and genetic algorithms. The ChronosPM system will be developed using the PHP programming language to perform the storage of data and implementation of logic required to perform the processes of allocation and prioritization proposed by ChronosPM system. The evaluation of the results of ChronosPM system will be made through a form consists of 5 questions with Likert items to a qualitative analysis of the application.
+\end{abstract}
+     
+\begin{resumo} 
+  Este artigo descreve o modelo de sistema de recomendação de alocação de recursos humanos e priorização de tarefas em projetos de desenvolvimento de software que visa auxiliar gerentes de projetos na tomada de decisão relacionada a alocação de atividades baseado no perfil dos stakeholders para assim obter melhores resultados na execução das atividades de projetos. A pesquisa realizada para implementação do sistema ChronosPM engloba os temas gerenciamento de projetos, teoria das restrições e tecnologias de desenvolvimento como a linguagem de programação PHP e algoritmos genéticos. O sistema ChronosPM será desenvolvido utilizando a linguagem de programação PHP para realizar a persistência dos dados e implementação da lógica necessária para realizar os processos de alocação e priorização propostos pelo sistema ChronosPM. A avaliação dos resultados do sistema ChronosPM será realizada através de um formulário composto de 5 questões com itens Likert para uma análise qualitativa da aplicação.
+\end{resumo}
+
+
+\section{Introdução}
+
+
+A utilização da estrutura de projetos para obtenção de resultados vem crescendo nos últimos anos. O objetivo de todo o projeto é entregar o escopo acordado, com a qualidade esperada pelo cliente, dentro do prazo e custos orçados \cite{lewis:1993}. Desta forma, com a alta demanda de profissionais habilitados para gerenciar esses projetos, as organizações buscam formas de maximizar o rendimento das equipes e tornar o processo de gerenciamento de projetos automatizado e dinâmico.
+
+O gerente de projetos (GP) é a pessoa designada pela organização executora para atingir os objetivos do projeto \cite{pmbok:2008}. Entre as atribuições do gerente de projetos está a distribuição de recursos humanos em atividades definidas no escopo do projeto.
+
+As pessoas envolvidas no projeto, comumente denominadas de recursos humanos, possuem limitações que levam o GP a implementar um planejamento prévio do perfil dos recursos e posteriormente realizar a alocação dos mesmos, o que gera um empenho de tempo muito grande do GP que muitas vezes não se justifica pelo tamanho do escopo do projeto.
+
+Neste contexto, onde os profissionais de gerenciamento de projetos necessitam de uma ferramenta que auxilie na alocação e priorização de atividades, este trabalho visa realizar a implementação de um sistema de recomendação de alocação de recursos humanos e priorização de atividades automatizadas em projetos.
+
+O sistema ChronosPM auxiliará o gerente de projetos no processo de alocação realizando inicialmente a importação de um arquivo com os dados das atividades do projeto e os recursos humanos disponíveis para o projeto. Desta forma, o resultado do processo de alocação é apresentado para o gerente de projetos através de um dashboard para que o mesmo possa verificar se a proposta implementada pelo sistema ChronosPM é aceitável ou necessita de ajustes. Os ajustes da alocação proposta podem ser realizados através do próprio dashboard. Após realizada a verificação e possíveis ajustes, o gerente de projetos poderá realizar a exportação de um arquivo computacional com a alocação realizada.
+\section{Referencial Teórico} \label{sec:firstpage}
+\subsection{Gerenciamento de Projetos}
+
+A proposta do gerenciamento de projetos é estabelecer um processo estruturado e lógico para lidar com eventos que se caracterizam pela novidade, complexidade e dinâmica ambiental [Vargas, 2005].
+
+Ao planejar um projeto, uma das responsabilidades do gerente de projetos é definir as atividades (tarefas) do projeto. As tarefas são as ações específicas a serem realizadas para produzir as entregas do projeto. As tarefas definidas devem ser sequenciadas e estimadas (recursos necessários e duração da tarefa), produzindo a estrutura analítica de projetos (EAP) e a partir dela o cronograma de atividades do projeto. Durante a execução das atividades, o gerente de projetos analisa o andamento das atividades para atualizar o progresso e gerenciar as mudanças feitas no cronograma \cite{pmbok:2008}. Uma vez definidas as tarefas do projeto, a equipe divide e executa cada tarefa, enquanto o gerente de projetos acompanha a evolução do trabalho da equipe \cite{pmbok:2008}.
+
+\subsection{Teoria das Restrições}
+
+A Teoria das Restrições, TOC (Theory of Constraints) é uma teoria que parte da identificação inicial da meta da empresa. Uma restrição é qualquer coisa que limite um sistema de atingir uma performance superior em relação à sua meta \cite{goldratt:1995}. Assim, o desempenho do sistema como um todo, isto é, do projeto, é determinado pelas restrições. 
+
+O processo decisório visando a melhor utilização desse conjunto de restrições está baseado em um sistema de indicadores. Esses indicadores, na gestão de projetos, podem ser compostos pela disponibilidade dos recursos humanos quando solicitados, conflitos sobre prioridades e estouros orçamentários durante a execução de um projeto. O processo de melhoria contínua segundo a TOC é muito simples e intuitivo, porque se baseia no bom senso. No caso da estimativa de atividades de um projeto, naturalmente é estimado um prazo de entrega sem que seja realmente executada aquela atividade, portanto deixa-se a execução de determinada atividade para o último momento. Desta forma, os problemas aparecem durante a execução e o atraso fica praticamente garantido. Goldratt também introduz novos termos e conceitos na solução dos problemas de gerenciamento de projetos segundo a TOC, tais como: Corrente Crítica, Pulmão de Recurso, Pulmão de Convergência e Pulmão de Projeto.
+
+\subsection{UX/UI}
+
+Experiência do usuário também conhecida como User Experience (UX) é a área da ciência preocupada em compreender como é a relação do usuário com um artefato. Essa área da ciência se foca em entender e mensurar essa experiência desde as expectativas que o usuário criar, ou seja, suas primeiras impressões do artefato, no primeiro momento, passando pela qualidade de uso (Usabilidade), finalizando com as impressões finais que o usuário retém após o uso \cite{fernandes:2015}.
+
+\subsection{Chronos}
+
+O Chronos [Batista; Tavares; et al, 2011] é um modelo para o gerenciamento ubíquo de projetos. A sua finalidade é cobrir todo o ciclo do gerenciamento de projetos baseando- se no PMBoK \cite{pmbok:2008}, mapas mentais e Scrum \cite{schwaber:2004}, agindo pró- ativamente no apoio ao gerenciamento de projetos [Batista; Tavares; et al, 2011].
+
+A Figura 1 apresenta o modelo Chronos.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.9\textwidth]{chronos.png}
+\caption{Modelo Chronos [Batista; Tavares; et al, 2011].}
+\label{fig:chronos}
+\end{figure}
+
+O modelo propõe três etapas para o gerenciamento de projetos. Na primeira etapa, o mapa mental é usado como entrada inicial do modelo. A segunda etapa define o gerenciamento do projeto, onde a Estrutura Analítica do Projeto (EAP) é criada com base no mapa mental gerado pelos stakeholders e o gerente de projetos inicia o gerenciamento aplicando as boas práticas definidas pelo PMBoK \cite{pmbok:2008}. A terceira etapa define a execução do projeto utilizando o Scrum \cite{schwaber:2004}. As
+?atividades da EAP são transformadas em histórias que compõem o Product Backlog \cite{schwaber:2004} e o projeto é executado em Sprints \cite{schwaber:2004}, onde é sugerida a alocação de stakeholders para a execução de tarefas baseado-se nos seus perfis e históricos em projetos anteriores [Batista; Tavares; et al, 2011].
+
+
+\subsection{CakePHP}
+
+CakePHP é um framework para a linguagem PHP que possui uma base robusta e sólida para suas aplicações e pode tratar todos os aspectos da requisição inicial do usuário até a renderização de uma página web \cite{belemescolha}. CakePHP é um framework que contém dezenas de funções e métodos que simplificam o desenvolvimento web muito parecido como bibliotecas já fazem. Como tal, o CakePHP espera que você estenda seus objetos e adicione seus próprios recursos personalizados. Com CakePHP, não é necessário implementar cada função individualmente. Em vez disso, os desenvolvedores utilizam um pacote de serviços de scripts, bibliotecas e convenções que são projetados especificamente para desenvolvimento web \cite{golding:2008}.
+O CakePHP impõe uma estrutura de Model, View e Controller (MVC) para aplicações web. Basicamente, ele separa operações típicas em áreas específicas: Models para toda a sua interação com o banco, Views para toda a sua saída e exibição de informações, e Controllers para todos os seus comandos / scripts para entrada e fluxo do programa. A aplicação típica php mistura cada uma destas três funções no mesmo código, tornando-o difícil de manter e debugar \cite{golding:2008}.
+O CakePHP é reconhecido pela simplicidade e pela alta produtividade que ele proporciona. Baseado no framework Rails para Ruby ele funciona através de um gerador de código que produz toda a persistência dos dados deixando para o programador desenvolver a regra de negócio de cada sistema.
+
+\subsection{Algoritmos Genéticos}
+
+Os Algoritmos Genéticos (GAs-Genetic Algorithms) constituem uma técnica de busca e otimização, altamente paralela, inspirada no princípio Darwiniano de seleção natural e reprodução genética [Goldberg 1989]. O principal objetivo dos algoritmos genéticos é buscar o aperfeiçoamento das soluções de problemas através de novas implementações e utilizar as informações geradas neste processo para encontrar soluções cada vez melhores.
+O gerenciamento de projetos se associa ao sistema ChronosPM por ser necessário realizar um conjunto de atividades temporárias para a criação de um produto, serviço ou resultados únicos através da execução de atividades por recursos que possuem habilidades definidas e que influenciam no andamento do projeto. A Teoria das Restrições (TOC) está associada ao sistema ChronosPM por tratar especificamente de restrições de projetos que normalmente envolvem recursos, atividades e o tempo dedicado para tais atividades que impactam diretamente no custo do projeto. O sistema ChronosPM se destaca por adotar a análise da interface do usuário através do conceito de experiência do usuário com a adoção do dashboard visual para avaliação da alocação realizada pelo sistema. Já o projeto Chronos influência diretamente o sistema ChronosPM por adotar boas práticas de gerenciamento de projetos definidas pelo PMBOK como a estrutura analítica do projeto (EAP) e alocação de recursos humanos, onde o Chronos utiliza a estrutura de sprints proveniente dos métodos ágeis. O sistema
+?ChronosPM tira vantagem do uso do framework de desenvolvimento web CakePHP para a implementação das rotinas de alocação, priorização e persistência das informações necessárias para o funcionamento do sistema. Os algoritmos genéticos são de suma importância para o funcionamento do sistema ChronosPM pois auxiliam diretamente na melhoria do processo de alocação por buscar sempre o melhor resultado para o objetivo do algoritmo que neste caso é a alocação e priorização de atividades
+
+\section{Trabalhos Relacionados}
+
+Dentre os trabalhos pesquisados, destacam-se 3 artigos que atuam na mesma área de pesquisa do sistema ChronosPM. O artigo A Task Allocation Optimizer for Software Construction \cite{duggan:2004} (Artigo 1)que foca os seus estudos no desenvolvimento de um modelo de alocação de tarefas em projetos de desenvolvimento de software baseado em algoritmos genéticos utilizando como como parâmetros principais a habilidade dos recursos humanos e complexidade ciclomática das atividades.
+O artigo Self-Adapting Task Allocation Approach for Software Outsourcing Services \cite{li:2012} (Artigo 2)que aborda os problemas relacionados a alocação de tarefas no serviço de desenvolvimento de software outsourcing e propõe 2 algoritmos para auto-alocação que abrangem conceitos de algoritmos genéticos para encontrar a melhor alocação de tarefas.
+O artigo Task Allocation Model in Globally Distributed Software Projects using Genetic Algorithms \cite{fernandez:2012} (Artigo 3) busca realizar o teste de algoritmos genéticos na etapa de alocação de recursos humanos de forma semi- automatizada em um cenário de projetos de desenvolvimento de software.
+O sistema ChronosPM possui vantagens em relação aos trabalhos relacionados como ter um dashboard de avaliação do resultado que torna a usabilidade do sistema otimizada para os usuários e a exportação da estrutura analítica do projeto (EAP) pós- processada para importação em ferramentas de gerenciamento de projetos.
+
+\begin{table}[ht]
+\centering
+\caption{Análise comparativa entre os trabalhos relacionados e o modelo proposto}
+\label{tab:exTable1}
+\includegraphics[width=.7\textwidth]{table.jpg}
+\end{table}
+
+O quesito Interoperabilidade com sistemas de gerenciamento de projetos baseados em EAP se refere a capacidade que os trabalhos relacionados tem de realizar o processamento de arquivos gerados por tais ferramentas de gerenciamento de projetos. O critério Exportação de EAP pós-processamento se refere a exportação de um arquivo computacional padrão XML como resultado da alocação realizada pelos trabalhos apresentados. Já o item Uso de métodos estatísticos indica quais os métodos estatísticos utilizados pelos trabalhos relacionados para alocação e priorização das atividades do projeto. O item Priorização automatizada de tarefas indica quais trabalhos relacionados realizam a Priorização de Tarefas de forma automatizada. O critério Alocação de tarefas automatizada baseada no perfil dos stakeholders informa quais trabalhos relacionados realizam alocação de tarefas de forma automatizada em projetos. O item Dashboard Multi-plataforma (Web) indica quais trabalhos relacionados possuem interface web para utilização. O item Software Livre (Open-Source) informa quais trabalhos relacionados são aplicações desenvolvidas e mantidas de forma livre.
+A seção 4 apresenta o modelo e a metodologia de desenvolvimento do sistema ChronosPM em relação a tecnologias, estrutura de interface e como será o fluxo de informações da aplicação.
+
+\section{ChronosPM}
+
+Nas sessões abaixo serão descritas as metodologias e arquiteturas utilizadas para implementar o sistema ChronosPM
+
+\subsection{Abordagem contextual}
+
+A figura 1 apresenta a abordagem de alocação e priorização automatizada de tarefas proposto pelo ChronosPM em relação a forma tradicional de alocação do gerenciamento de projetos
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.9\textwidth]{modelo-tradicionalxchronos.png}
+\caption{Processo de alocação e priorização automatizada proposto pelo ChronosPM.}
+\label{fig:modelotradicionalxchronos}
+\end{figure}
+
+O processo de alocação de recursos humanos em atividades de projetos de desenvolvimento de software ainda é manual e depende do conhecimento empírico do Gerente de Projetos em relação a sua equipe e a complexidade das atividades que serão desempenhadas. O ChronosPM propõe um modelo para tornar essa etapa do
+?gerenciamento de projeto mais eficaz através da alocação e priorização automatizada de recursos humanos em atividades, sendo esse o grande diferencial proposto no artigo, sendo este o diferencial proposto pelo sistema ChronosPM.
+
+\subsection{Modelo}
+
+Na figura 3 é apresentado o fluxo linear de informações da aplicação, desde a entrada do arquivo com os dados das atividades e recursos humanos do projeto até a exportação do arquivo pós-processado da alocação proposta.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.8\textwidth]{processo.PNG}
+\caption{Fluxo do funcionamento da aplicação.}
+\label{fig:exampleFig2}
+\end{figure}
+
+Para realizar as atividades propostas pelo sistema ChronosPM, o modelo propõe a importação de um arquivo padrão XML gerado através da ferramenta de gerenciamento de projetos Microsoft Office Project 2013.
+O arquivo xml gerado na ferramenta Microsoft Office Project 2013 é composto de informações definidas pelo gerente de projetos que define os índices de habilidade (IH) recomendados para cada atividade do projeto através de campos personalizados de tipo numérico, sendo 0 para nenhuma habilidade requerida e 10 para habilidade máxima exigida na área específica de conhecimento. No caso dos recursos humanos do projeto, são definidos índices de produtividade (IP) através de campos personalizados de tipo numérico, sendo 0 para nenhuma produtividade e 10 para produtividade máxima exigida na área específica de conhecimento.
+A figura 4 apresenta a interface visual do dashboard com informações obtidas da proposta de alocação realizada pelo sistema ChronosPM após o processamento inicial do arquivo xml.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.9\textwidth]{tela-app.png}
+\caption{Dashboard de simulação e simulação do ChronosPM.}
+\label{fig:exampleFig2}
+\end{figure}
+
+O dashboard é composto de uma lista de atividades com os dados de data de inicio e término da respectiva atividade, recursos alocados na respectiva atividade, custo estimado para realização da atividade com base nas informações fornecidas no arquivo xml. As opções para uma atividade são a adição, troca ou exclusão de recursos humanos para execução da atividade, troca da data de inicio e término ou reordenação da lista de atividades. Também podem ser visualizadas as informações de alocação de cada recurso em forma de gráfico após o processamento dos ajustes.
+
+\subsection{Arquitetura}
+
+A arquitetura para a implementação do modelo baseia-se no modelo MVC, sendo dividida em três módulos: interface, gerenciador e repositório.
+O módulo Interface compreende a apresentação de informações para o usuário e a entrada de arquivos com os dados dos projetos bem como suas atividades e recursos, o Gerenciador é o responsável pela alteração do estado do módulo Repositório e da Interface. O Repositório compreende o estado das informações.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.9\textwidth]{estrutura.png}
+\caption{Estrutura de módulos e componentes da aplicação.}
+\label{fig:exampleFig2}
+\end{figure}
+
+O módulo Interface apresentado na figura 5 possui os componentes Apresentação e Arquivos. O componente Apresentação é responsável por mostrar e recolher as informações apresentadas ao usuário e o Arquivos por receber os arquivos para processamento e realizar validação do mesmo. Ambos os componentes mandam informações para o módulo Gerenciador. O módulo Repositório apresentado na figura 5 possui o componente Informações composto das tarefas, recursos e alocações já realizadas pelo sistema ChronosPM. Essas informações serão utilizadas no módulo Gerenciador. O módulo Gerenciador apresentado na figura 5 possui os componentes Alocação de recursos, Priorização de atividades e Controle de alocação. O componente Alocação de recursos é responsável por receber o arquivo XML do módulo Interface e realizar o processo de alocação dos recursos em atividades. O componente Priorização de tarefas definirá a prioridade das tarefas e as enviará para o módulo Interface. Por fim o componente Controle de alocação executará a mudança de estados das tarefas vindos do módulo Interface no módulo Repositório.
+
+\subsection{Método de alocação dinâmica}
+
+No momento da importação do arquivo XML do Microsoft Office Project 2013 no ChronosPM com os dados do projeto, serão comparados os índices de habilidade necessárias com os índices de produtividade dos recursos humanos para ser calculado o índice de alocação (IA) de cada recurso em relação a atividade, que indica qual recurso mais apropriado para desempenhar tal atividade de acordo com sua produtividade nas áreas exigidas. Desta forma, todos os recursos terão um IA para as atividades do projeto. Caso não hajam índices de produtividade definidos para os recursos, será definido índice 10 para todos os recursos em todas as áreas exigidas pela atividade.
+Para definição do IA em relação a atividade de cada recurso é realizado o seguinte cálculo:
+IA= ?( IPi * IHi)
+Primeiramente é feita a multiplicação dos Índices de Habilidades das atividades pelos Índices de Produtividade dos recursos humanos. Após, é realizada a soma dos valores resultantes da multiplicação definindo o IA. O valor do IA é arredondado em uma casa decimal após a vírgula.
+A representação abaixo mostra como a pontuação ajudará a definir a alocação de recursos.
+
+\begin{table}[ht]
+\centering
+\caption{Exemplo de índices de habilidade exigidos pela atividade}
+\label{tab:exTable1}
+\includegraphics[width=.8\textwidth]{tabela-atividade.PNG}
+\end{table}
+
+A tabela 1 representa os índices de habilidade recomendados para execução da atividade conforme definição realizada no arquivo XML
+
+\begin{table}[ht]
+\centering
+\caption{Exemplo de IP e resultado do cálculo de IA do Stakeholder 1}
+\label{tab:exTable1}
+\includegraphics[width=.8\textwidth]{stakeholder1.PNG}
+\end{table}
+
+A tabela 2 representa os índices de produtividade definidos pelo gerente de projetos para o stakeholder 1 e o resultado do índice de alocação (IA) em relação ao cálculo IP * IH para o stakeholder 1 em relação a atividade proposta na tabela 1
+
+\begin{table}[ht]
+\centering
+\caption{Exemplo de IP e resultado do cálculo de IA do Stakeholder 2}
+\label{tab:exTable1}
+\includegraphics[width=.8\textwidth]{stake2.PNG}
+\end{table}
+
+A tabela 3 representa os índices de produtividade definidos pelo gerente de projetos para o stakeholder 2 e o resultado do índice de alocação (IA) em relação ao cálculo IP * IH para o stakeholder 2 em relação a atividade proposta na tabela 1
+O Stakeholder 1 possui IA superior ao do Stakeholder 2, que indica estar mais apto a desempenhar a Atividade descrita na tabela 1 por ter índices de produtividade mais próximos aos exigidos pela atividade.
+
+
+
+\subsection{Método de priorização de atividades}
+
+Para a priorização das atividades foram criados dois índices: Índice Temporal (IT) que se refere ao tempo para execução da atividade e Índice de Prioridade da Atividade (IPA). O Índice Temportal se refere ao tempo de execução da atividade e qual o prazo para de término com base na data atual. Portanto, o Índice Temporal define de 0 a 10, sendo 0 atividades com prazo para entrega (data de término) mais distante da data em que está sendo realizado o processamento e 10 para atividades com menor prazo para entrega ou em atraso.
+???
+?O Índice de Prioridade da Atividade é definido pelo Gerente de Projetos no cadastro do projeto na ferramenta Microsoft Office Project 2013, portanto o IPA consiste em um valor numérico de 0 a 10, sendo 0 prioridade mínima e 10 prioridade máxima.
+Para realizar a priorização das atividades e assim definir uma ordem de execução, é realizado o seguinte cálculo para cada atividade que irá encontrar o Índice de Ordenação(IO):
+IO=IPA* IT
+Após calculado o IO de cada atividade, será possível realizar a ordenação das mesmas baseando-se pelo número do IO de cada uma. Uma vez que não tenha sido informados a prioridade ou data de término da atividade, as atividades serão ordenadas por data de início.
+
+\section{Conclusão}
+
+O modelo proposto neste trabalho será avaliado através da abordagem de cenários em 3 projetos de desenvolvimento de software com equipes de até 10 pessoa. No entanto, o modelo pode ser aplicado em outras situações desde que os perfis de atividades e recursos humanos possam ser definidos de forma numérica. Ainda é necessário realizar a definição do algoritmo genético para finalizar o processo de alocação com base na função objetivo definida no método de alocação dinâmica.
+
+\subsection{Experimento e avaliação}
+
+A avaliação da solução proposta será realizado através da aplicação de formulários com 5 questões compostas por itens likert para análise qualitativa do sistema por 3 gerentes de projetos que utilizarão a ferramenta em projetos que atendam a especificação de número de membros no projeto não ultrapassando o limite de 10 membros.
+
+\subsection{Trabalhos futuros}
+
+Espera-se no futuro a exploração de pré-definic?ões de alocação com base histórica para complementar o objetivo da solução proposta de alocar e priorizar de forma automatizada. Além disso, realizar a integração do sistema com outras ferramentas de gerenciamento de projetos baseados no padrão XML e que possuam como base a estrutura analítica do projeto (EAP) a fim de simplificar a adoção da solução em projetos de portes médio e grande.
+Outro aspecto que pode ser abordado em pesquisas futuras é a relação entre as partes interessadas dos projetos a nível gerencial, pois o gerente de projetos pode definir o peso dos indicadores para os seus projetos, porém os stakeholders podem estar alocados em vários projetos geridos por outros gerentes e o modelo não considera este fator de interesse para definir a alocação e prioridade das atividades.
+
+\section{CD-ROMs and Printed Proceedings}
+
+In some conferences, the papers are published on CD-ROM while only the
+abstract is published in the printed Proceedings. In this case, authors are
+invited to prepare two final versions of the paper. One, complete, to be
+published on the CD and the other, containing only the first page, with
+abstract and ``resumo'' (for papers in Portuguese).
+
+\section{Sections and Paragraphs}
+
+Section titles must be in boldface, 13pt, flush left. There should be an extra
+12 pt of space before each title. Section numbering is optional. The first
+paragraph of each section should not be indented, while the first lines of
+subsequent paragraphs should be indented by 1.27 cm.
+
+\subsection{Subsections}
+
+The subsection titles must be in boldface, 12pt, flush left.
+
+\section{Figures and Captions}\label{sec:figs}
+
+
+Figure and table captions should be centered if less than one line
+(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
+both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
+be Helvetica, 10 point, boldface, with 6 points of space before and after each
+caption.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.5\textwidth]{fig1.jpg}
+\caption{A typical figure}
+\label{fig:exampleFig1}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.3\textwidth]{fig2.jpg}
+\caption{This figure is an example of a figure caption taking more than one
+  line and justified considering margins mentioned in Section~\ref{sec:figs}.}
+\label{fig:exampleFig2}
+\end{figure}
+
+In tables, try to avoid the use of colored or shaded backgrounds, and avoid
+thick, doubled, or unnecessary framing lines. When reporting empirical data,
+do not use more decimal digits than warranted by their precision and
+reproducibility. Table caption must be placed before the table (see Table 1)
+and the font used must also be Helvetica, 10 point, boldface, with 6 points of
+space before and after each caption.
+
+\begin{table}[ht]
+\centering
+\caption{Variables to be considered on the evaluation of interaction
+  techniques}
+\label{tab:exTable1}
+\includegraphics[width=.7\textwidth]{table.jpg}
+\end{table}
+
+\section{Images}
+
+All images and illustrations should be in black-and-white, or gray tones,
+excepting for the papers that will be electronically available (on CD-ROMs,
+internet, etc.). The image resolution on paper should be about 600 dpi for
+black-and-white images, and 150-300 dpi for grayscale images.  Do not include
+images with excessive resolution, as they may take hours to print, without any
+visible difference in the result. 
+
+\section{References}
+
+Bibliographic references must be unambiguous and uniform.  We recommend giving
+the author names references in brackets, e.g. \cite{knuth:84},
+\cite{boulic:91}, and \cite{vargas:2005}.
+
+The references must be listed using 12 point font size, with 6 points of space
+before each reference. The first line of each reference should not be
+indented, while the subsequent should be indented by 0.5 cm.
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}

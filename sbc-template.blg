@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: sbc-template.aux
+The style file: sbc.bst
+Database file #1: sbc-template.bib
+Warning--empty year in belemescolha
+Warning--empty journal in belemescolha
+You've used 13 entries,
+            1935 wiz_defined-function locations,
+            538 strings with 5647 characters,
+and the built_in function-call counts, 4541 in all, are:
+= -- 430
+> -- 165
+< -- 12
++ -- 60
+- -- 52
+* -- 321
+:= -- 801
+add.period$ -- 42
+call.type$ -- 13
+change.case$ -- 85
+chr.to.int$ -- 13
+cite$ -- 15
+duplicate$ -- 212
+empty$ -- 345
+format.name$ -- 71
+if$ -- 908
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 19
+newline$ -- 67
+num.names$ -- 41
+pop$ -- 114
+preamble$ -- 1
+purify$ -- 90
+quote$ -- 0
+skip$ -- 148
+stack$ -- 0
+substring$ -- 221
+swap$ -- 28
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 66
+warning$ -- 2
+while$ -- 33
+width$ -- 0
+write$ -- 163
+(There were 2 warnings)

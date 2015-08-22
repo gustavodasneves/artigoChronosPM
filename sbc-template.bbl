@@ -1,0 +1,78 @@
+\begin{thebibliography}{}
+
+\bibitem[Bel{\'e}m et~al. ]{belemescolha}
+Bel{\'e}m, P. H.~A., De~Souza, A.~N., Meza, E. B.~M., and Vianna, D.~S.
+\newblock Escolha de um framework para a linguagem de programa{\c{c}}{\~a}o php
+  atrav{\'e}s do m{\'e}todo ahp cl{\'a}ssico.
+
+\bibitem[Boulic and Renault 1991]{boulic:91}
+Boulic, R. and Renault, O. (1991).
+\newblock 3d hierarchies for animation.
+\newblock In Magnenat-Thalmann, N. and Thalmann, D., editors, {\em New Trends
+  in Animation and Visualization}. John Wiley {\&} Sons ltd.
+
+\bibitem[Duggan et~al. 2004]{duggan:2004}
+Duggan, J., Byrne, J., and Lyons, G.~J. (2004).
+\newblock A task allocation optimizer for software construction.
+\newblock {\em Software, IEEE}, 21(3):76--82.
+
+\bibitem[Fernandes 2015]{fernandes:2015}
+Fernandes, F.~R. (2015).
+\newblock {\em Design de Informa{\c{c}}{\~a}o: base para a disciplina no curso
+  de Design}.
+\newblock FRF Produ{\c{c}}{\~o}es.
+
+\bibitem[Fernandez and Basavaraju 2012]{fernandez:2012}
+Fernandez, J. and Basavaraju, M. (2012).
+\newblock Task allocation model in globally distributed software projects using
+  genetic algorithms.
+\newblock In {\em 2012 IEEE Seventh International Conference on Global Software
+  Engineering}, page 181. IEEE.
+
+\bibitem[Golding 2008]{golding:2008}
+Golding, D. (2008).
+\newblock {\em Beginning CakePHP: from novice to professional}.
+\newblock Apress.
+
+\bibitem[Goldratt and Cox 1995]{goldratt:1995}
+Goldratt, E.~M. and Cox, J. (1995).
+\newblock A meta: um processo de aprimoramento cont{\'\i}nuo.
+\newblock In {\em A meta: um processo de aprimoramento cont{\'\i}nuo}.
+  Educator.
+
+\bibitem[Knuth 1984]{knuth:84}
+Knuth, D.~E. (1984).
+\newblock {\em The {\TeX} Book}.
+\newblock Addison-Wesley, 15th edition.
+
+\bibitem[Lewis 1993]{lewis:1993}
+Lewis, J.~P. (1993).
+\newblock {\em The Project Manager's Desk References: A Comprehensive Guide to
+  Project Planning, Scheduling, Evaluation, Control \& Sytems}.
+\newblock Golden Books Centre.
+
+\bibitem[Li et~al. 2012]{li:2012}
+Li, F., Lin, H., Li, S., Guo, C., and Zhao, X. (2012).
+\newblock Self-adapting task allocation approach for software outsourcing
+  services.
+\newblock In {\em Service Operations and Logistics, and Informatics (SOLI),
+  2012 IEEE International Conference on}, pages 479--484. IEEE.
+
+\bibitem[PMBOK 2008]{pmbok:2008}
+PMBOK, G. (2008).
+\newblock Um guia do conjunto de conhecimentos em gerenciamento de projetos
+  (guia pmbok{\textregistered}). em portugu{\^e}s.
+\newblock {\em Project Management Institute, Inc. EUA. Vers{\~a}o em Pdf para
+  associado PMI}.
+
+\bibitem[Schwaber 2004]{schwaber:2004}
+Schwaber, K. (2004).
+\newblock {\em Agile project management with Scrum}.
+\newblock Microsoft Press.
+
+\bibitem[Vargas 2005]{vargas:2005}
+Vargas, R.~V. (2005).
+\newblock {\em Gerenciamento de Projetos (6a edi{\c{c}}{\~a}o)}.
+\newblock Brasport.
+
+\end{thebibliography}
