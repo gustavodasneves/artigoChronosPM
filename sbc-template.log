@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  22 AUG 2015 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.13)  22 AUG 2015 18:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -114,6 +114,20 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2015/08/03 3.9m The Babel package
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2015/08/03 3.9m Babel common definitions
+\babel@savecnt=\count92
+\U@D=\dimen122
+)
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks17
@@ -135,25 +149,22 @@ LaTeX Warning: Label `tab:exTable1' multiply defined.
 
 LaTeX Warning: Label `tab:exTable1' multiply defined.
 
-
-LaTeX Warning: Label `tab:exTable1' multiply defined.
-
 )
 \openout1 = `sbc-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 23.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -193,16 +204,16 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
-\scratchdimen=\dimen122
+\scratchcounter=\count93
+\scratchdimen=\dimen123
 \scratchbox=\box27
-\nofMPsegments=\count93
-\nofMParguments=\count94
+\nofMPsegments=\count94
+\nofMParguments=\count95
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count95
-\MPscratchDim=\dimen123
-\MPnumerator=\count96
-\makeMPintoPDFobject=\count97
+\MPscratchCnt=\count96
+\MPscratchDim=\dimen124
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
 \everyMPtoPDFconversion=\toks20
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -249,99 +260,108 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 31.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 31.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 31.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
+(Font)              <6> on input line 25.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 25.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 33.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 27.
+
+Underfull \hbox (badness 5832) in paragraph at lines 34--35
+[]\OT1/ptm/m/it/12 O sis-tema Ch-ro-nosPM ser[]a de-sen-vol-vido uti-li-zando a
+ lin-gua-gem de
+ []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
- [1
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+[1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1584) in paragraph at lines 63--64
+Underfull \hbox (badness 1584) in paragraph at lines 59--60
 \OT1/ptm/m/n/12 identifica[][]ao ini-cial da meta da em-presa. Uma restri[][]ao
  []e qual-quer coisa que
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 63--64
-\OT1/ptm/m/n/12 lim-ite um sis-tema de atin-gir uma per-for-mance su-pe-rior em
+Underfull \hbox (badness 1577) in paragraph at lines 59--60
+\OT1/ptm/m/n/12 li-mite um sis-tema de atin-gir uma per-for-mance su-pe-rior em
  rela[][]ao []a sua meta
  []
 
 [2] <chronos.png, id=15, 681.54625pt x 266.9975pt>
 File: chronos.png Graphic file (type png)
  <use chronos.png>
-Package pdftex.def Info: chronos.png used on input line 79.
+Package pdftex.def Info: chronos.png used on input line 75.
 (pdftex.def)             Requested size: 384.1096pt x 150.47496pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 80.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 76.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 80.
- [3] [4 <./chronos.png>] <table.jpg, id=25, 365.2044pt x 217.2918pt>
-File: table.jpg Graphic file (type jpg)
- <use table.jpg>
-Package pdftex.def Info: table.jpg used on input line 109.
-(pdftex.def)             Requested size: 298.75264pt x 177.75932pt.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 76.
+ [3 <./chronos.png>] [4] <tabela-comparativa.png, id=25, 693.59125pt x 336.2562
+6pt>
+File: tabela-comparativa.png Graphic file (type png)
+
+<use tabela-comparativa.png>
+Package pdftex.def Info: tabela-comparativa.png used on input line 116.
+(pdftex.def)             Requested size: 384.1096pt x 186.22421pt.
  [5]
 <modelo-tradicionalxchronos.png, id=29, 671.50874pt x 234.8775pt>
 File: modelo-tradicionalxchronos.png Graphic file (type png)
 
 <use modelo-tradicionalxchronos.png>
-Package pdftex.def Info: modelo-tradicionalxchronos.png used on input line 125.
+Package pdftex.def Info: modelo-tradicionalxchronos.png used on input line 132.
 
 (pdftex.def)             Requested size: 384.1096pt x 134.35106pt.
- [6 <./table.jpg> <./modelo-tradicionalxchronos.png>] <processo.PNG, id=34, 484
-.05844pt x 368.87813pt>
+ [6 <./tabela-comparativa.png> <./modelo-tradicionalxchronos.png>] <processo.PN
+G, id=35, 484.05844pt x 368.87813pt>
 File: processo.PNG Graphic file (type png)
- <use processo.PNG>
-Package pdftex.def Info: processo.PNG used on input line 139.
-(pdftex.def)             Requested size: 341.43437pt x 260.19981pt.
 
-<tela-app.png, id=35, 1284.8pt x 1003.75pt>
+<use processo.PNG>
+Package pdftex.def Info: processo.PNG used on input line 145.
+(pdftex.def)             Requested size: 341.43437pt x 260.19981pt.
+ <tela-app.png, id=36, 1284.8pt x 1003.75pt>
 File: tela-app.png Graphic file (type png)
- <use tela-app.png>
-Package pdftex.def Info: tela-app.png used on input line 150.
+
+<use tela-app.png>
+Package pdftex.def Info: tela-app.png used on input line 156.
 (pdftex.def)             Requested size: 384.1096pt x 300.08583pt.
- [7 <./processo.PNG>] <estrutura.png, id=41, 972.63374pt x 284.56313pt>
+ [7 <./processo.PNG>]
+<estrutura.png, id=42, 972.63374pt x 284.56313pt>
 File: estrutura.png Graphic file (type png)
  <use estrutura.png>
-Package pdftex.def Info: estrutura.png used on input line 164.
+Package pdftex.def Info: estrutura.png used on input line 170.
 (pdftex.def)             Requested size: 384.1096pt x 112.37732pt.
-
-[8 <./tela-app.png> <./estrutura.png>]
-<tabela-atividade.PNG, id=47, 291.33844pt x 82.05656pt>
+ [8 <./tela-app.png> <./estrutura.png>]
+<tabela-atividade.PNG, id=48, 291.33844pt x 82.05656pt>
 File: tabela-atividade.PNG Graphic file (type png)
 
 <use tabela-atividade.PNG>
-Package pdftex.def Info: tabela-atividade.PNG used on input line 183.
+Package pdftex.def Info: tabela-atividade.PNG used on input line 189.
 (pdftex.def)             Requested size: 341.43437pt x 96.17355pt.
- <stakeholder1.PNG, id=48, 289.83281pt x 78.2925pt>
+ <stakeholder1.PNG, id=49, 289.83281pt x 78.2925pt>
 File: stakeholder1.PNG Graphic file (type png)
 
 <use stakeholder1.PNG>
-Package pdftex.def Info: stakeholder1.PNG used on input line 192.
+Package pdftex.def Info: stakeholder1.PNG used on input line 198.
 (pdftex.def)             Requested size: 341.43437pt x 92.23738pt.
- <stake2.PNG, id=49, 289.83281pt x 79.79813pt>
+ <stake2.PNG, id=50, 289.83281pt x 79.79813pt>
 File: stake2.PNG Graphic file (type png)
 
 <use stake2.PNG>
-Package pdftex.def Info: stake2.PNG used on input line 201.
+Package pdftex.def Info: stake2.PNG used on input line 207.
 (pdftex.def)             Requested size: 341.43437pt x 94.01118pt.
  [9 <./tabela-atividade.PNG>] [10 <./stakeholder1.PNG> <./stake2.PNG>] (./sbc-t
 emplate.bbl
@@ -359,13 +379,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2763 strings out of 493091
- 39676 string characters out of 6134964
- 113051 words of memory out of 5000000
- 6189 multiletter control sequences out of 15000+600000
+ 3194 strings out of 493091
+ 45236 string characters out of 6134964
+ 123013 words of memory out of 5000000
+ 6607 multiletter control sequences out of 15000+600000
  22618 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,28p,1579b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,28p,1180b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
@@ -375,9 +395,9 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on sbc-template.pdf (12 pages, 480170 bytes).
+Output written on sbc-template.pdf (12 pages, 480781 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)

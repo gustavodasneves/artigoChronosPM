@@ -4,7 +4,7 @@
 
 \usepackage{graphicx,url}
 
-%\usepackage[brazil]{babel}   
+\usepackage[brazil]{babel}   
 \usepackage[latin1]{inputenc}  
 
      
@@ -16,14 +16,8 @@
 
 
 \address{Faculdade CNEC Gravataí\\
-  Caixa Postal 15.064 -- 91.501-970 -- Gravataí -- RS -- Brazil
-\nextinstitute
-  Department of Computer Science -- University of Durham\\
-  Durham, U.K.
-\nextinstitute
-  Departamento de Sistemas e Computação\\
-  Universidade Regional de Blumenal (FURB) -- Blumenau, SC -- Brazil
-  \email{gustavo.nevesgn@gmail.com}
+Caixa Postal 15.064 -- 91.501-970 -- Gravataí -- RS -- Brazil
+\email{gustavo.nevesgn@gmail.com}
 }
 
 \begin{document} 
@@ -35,7 +29,9 @@
 \end{abstract}
      
 \begin{resumo} 
- Este artigo descreve o modelo de sistema de recomendação de alocação de recursos humanos e priorização de tarefas em projetos de desenvolvimento de software que visa auxiliar gerentes de projetos na tomada de decisão relacionada a alocação de atividades baseado no perfil dos stakeholders para assim obter melhores resultados na execução das atividades de projetos. A pesquisa realizada para implementação do sistema ChronosPM engloba os temas gerenciamento de projetos, teoria das restrições e tecnologias de desenvolvimento como a linguagem de programação PHP e algoritmos genéticos. O sistema ChronosPM será desenvolvido utilizando a linguagem de programação PHP para realizar a persistência dos dados e implementação da lógica necessária para realizar os processos de alocação e priorização propostos pelo sistema ChronosPM. A avaliação dos resultados do sistema ChronosPM será realizada através de um formulário composto de 5 questões com itens Likert para uma análise qualitativa da aplicação.
+ Este artigo descreve o modelo de sistema de recomendação de alocação de recursos humanos e priorização de atividades em projetos de desenvolvimento de software que visa auxiliar gerentes de projetos na tomada de decisão relacionada a alocação de atividades baseado no perfil dos stakeholders para assim obter melhores resultados na execução das atividades de projetos. A pesquisa realizada para implementação do sistema ChronosPM engloba os temas gerenciamento de projetos, teoria das restrições e tecnologias de desenvolvimento como a linguagem de programação PHP e algoritmos genéticos. 
+ 
+ O sistema ChronosPM será desenvolvido utilizando a linguagem de programação PHP para realizar a persistência dos dados e implementação da lógica necessária para realizar os processos de alocação e priorização propostos pelo sistema ChronosPM. A avaliação dos resultados do sistema ChronosPM será realizada através de um formulário composto de 5 questões com itens Likert para uma análise qualitativa da aplicação.
 \end{resumo}
 
 
@@ -86,30 +82,41 @@ O modelo propõe três etapas para o gerenciamento de projetos. Na primeira etapa,
 
 \subsection{CakePHP}
 
-CakePHP é um framework para a linguagem PHP que possui uma base robusta e sólida para suas aplicações e pode tratar todos os aspectos da requisição inicial do usuário até a renderização de uma página web \cite{belemescolha}. CakePHP é um framework que contém dezenas de funções e métodos que simplificam o desenvolvimento web muito parecido como bibliotecas já fazem. Como tal, o CakePHP espera que você estenda seus objetos e adicione seus próprios recursos personalizados. Com CakePHP, não é necessário implementar cada função individualmente. Em vez disso, os desenvolvedores utilizam um pacote de serviços de scripts, bibliotecas e convenções que são projetados especificamente para desenvolvimento web \cite{golding:2008}.
-O CakePHP impõe uma estrutura de Model, View e Controller (MVC) para aplicações web. Basicamente, ele separa operações típicas em áreas específicas: Models para toda a sua interação com o banco, Views para toda a sua saída e exibição de informações, e Controllers para todos os seus comandos / scripts para entrada e fluxo do programa. A aplicação típica php mistura cada uma destas três funções no mesmo código, tornando-o difícil de manter e debugar \cite{golding:2008}.
+CakePHP é um framework para a linguagem PHP que possui uma base robusta e sólida para suas aplicações e pode tratar todos os aspectos da requisição inicial do usuário até a renderização de uma página web \cite{belemescolha}. CakePHP é um framework que contém dezenas de funções e métodos que simplificam o desenvolvimento web muito parecido como bibliotecas já fazem. Como tal, o CakePHP espera que você estenda seus objetos e adicione seus próprios recursos personalizados. Com CakePHP, não é necessário implementar cada função individualmente. 
+
+Em vez disso, os desenvolvedores utilizam um pacote de serviços de scripts, bibliotecas e convenções que são projetados especificamente para desenvolvimento web \cite{golding:2008}.
+O CakePHP impõe uma estrutura de Model, View e Controller (MVC) para aplicações web. Basicamente, ele separa operações típicas em áreas específicas: Models para toda a sua interação com o banco, Views para toda a sua saída e exibição de informações, e Controllers para todos os seus comandos / scripts para entrada e fluxo do programa. 
+
+A aplicação típica php mistura cada uma destas três funções no mesmo código, tornando-o difícil de manter e debugar \cite{golding:2008}.
+
 O CakePHP é reconhecido pela simplicidade e pela alta produtividade que ele proporciona. Baseado no framework Rails para Ruby ele funciona através de um gerador de código que produz toda a persistência dos dados deixando para o programador desenvolver a regra de negócio de cada sistema.
 
 \subsection{Algoritmos Genéticos}
 
 Os Algoritmos Genéticos (GAs-Genetic Algorithms) constituem uma técnica de busca e otimização, altamente paralela, inspirada no princípio Darwiniano de seleção natural e reprodução genética [Goldberg 1989]. O principal objetivo dos algoritmos genéticos é buscar o aperfeiçoamento das soluções de problemas através de novas implementações e utilizar as informações geradas neste processo para encontrar soluções cada vez melhores.
-O gerenciamento de projetos se associa ao sistema ChronosPM por ser necessário realizar um conjunto de atividades temporárias para a criação de um produto, serviço ou resultados únicos através da execução de atividades por recursos que possuem habilidades definidas e que influenciam no andamento do projeto. A Teoria das Restrições (TOC) está associada ao sistema ChronosPM por tratar especificamente de restrições de projetos que normalmente envolvem recursos, atividades e o tempo dedicado para tais atividades que impactam diretamente no custo do projeto. O sistema ChronosPM se destaca por adotar a análise da interface do usuário através do conceito de experiência do usuário com a adoção do dashboard visual para avaliação da alocação realizada pelo sistema. Já o projeto Chronos influência diretamente o sistema ChronosPM por adotar boas práticas de gerenciamento de projetos definidas pelo PMBOK como a estrutura analítica do projeto (EAP) e alocação de recursos humanos, onde o Chronos utiliza a estrutura de sprints proveniente dos métodos ágeis. O sistema ChronosPM tira vantagem do uso do framework de desenvolvimento web CakePHP para a implementação das rotinas de alocação, priorização e persistência das informações necessárias para o funcionamento do sistema. Os algoritmos genéticos são de suma importância para o funcionamento do sistema ChronosPM pois auxiliam diretamente na melhoria do processo de alocação por buscar sempre o melhor resultado para o objetivo do algoritmo que neste caso é a alocação e priorização de atividades
+
+O gerenciamento de projetos se associa ao sistema ChronosPM por ser necessário realizar um conjunto de atividades temporárias para a criação de um produto, serviço ou resultados únicos através da execução de atividades por recursos que possuem habilidades definidas e que influenciam no andamento do projeto. A Teoria das Restrições (TOC) está associada ao sistema ChronosPM por tratar especificamente de restrições de projetos que normalmente envolvem recursos, atividades e o tempo dedicado para tais atividades que impactam diretamente no custo do projeto. O sistema ChronosPM se destaca por adotar a análise da interface do usuário através do conceito de experiência do usuário com a adoção do dashboard visual para avaliação da alocação realizada pelo sistema. Já o projeto Chronos influência diretamente o sistema ChronosPM por adotar boas práticas de gerenciamento de projetos definidas pelo PMBOK como a estrutura analítica do projeto (EAP) e alocação de recursos humanos, onde o Chronos utiliza a estrutura de sprints proveniente dos métodos ágeis. 
+
+O sistema ChronosPM tira vantagem do uso do framework de desenvolvimento web CakePHP para a implementação das rotinas de alocação, priorização e persistência das informações necessárias para o funcionamento do sistema. Os algoritmos genéticos são de suma importância para o funcionamento do sistema ChronosPM pois auxiliam diretamente na melhoria do processo de alocação por buscar sempre o melhor resultado para o objetivo do algoritmo que neste caso é a alocação e priorização de atividades
 
 \section{Trabalhos Relacionados}
 
 Dentre os trabalhos pesquisados, destacam-se 3 artigos que atuam na mesma área de pesquisa do sistema ChronosPM. O artigo A Task Allocation Optimizer for Software Construction \cite{duggan:2004} (Artigo 1)que foca os seus estudos no desenvolvimento de um modelo de alocação de tarefas em projetos de desenvolvimento de software baseado em algoritmos genéticos utilizando como como parâmetros principais a habilidade dos recursos humanos e complexidade ciclomática das atividades.
+
 O artigo Self-Adapting Task Allocation Approach for Software Outsourcing Services \cite{li:2012} (Artigo 2)que aborda os problemas relacionados a alocação de tarefas no serviço de desenvolvimento de software outsourcing e propõe 2 algoritmos para auto-alocação que abrangem conceitos de algoritmos genéticos para encontrar a melhor alocação de tarefas.
+
 O artigo Task Allocation Model in Globally Distributed Software Projects using Genetic Algorithms \cite{fernandez:2012} (Artigo 3) busca realizar o teste de algoritmos genéticos na etapa de alocação de recursos humanos de forma semi- automatizada em um cenário de projetos de desenvolvimento de software.
+
 O sistema ChronosPM possui vantagens em relação aos trabalhos relacionados como ter um dashboard de avaliação do resultado que torna a usabilidade do sistema otimizada para os usuários e a exportação da estrutura analítica do projeto (EAP) pós- processada para importação em ferramentas de gerenciamento de projetos.
 
 \begin{table}[ht]
 \centering
 \caption{Análise comparativa entre os trabalhos relacionados e o modelo proposto}
-\label{tab:exTable1}
-\includegraphics[width=.7\textwidth]{table.jpg}
+\label{tab:exTabela1}
+\includegraphics[width=.9\textwidth]{tabela-comparativa.png}
 \end{table}
 
-O quesito Interoperabilidade com sistemas de gerenciamento de projetos baseados em EAP se refere a capacidade que os trabalhos relacionados tem de realizar o processamento de arquivos gerados por tais ferramentas de gerenciamento de projetos. O critério Exportação de EAP pós-processamento se refere a exportação de um arquivo computacional padrão XML como resultado da alocação realizada pelos trabalhos apresentados. Já o item Uso de métodos estatísticos indica quais os métodos estatísticos utilizados pelos trabalhos relacionados para alocação e priorização das atividades do projeto. O item Priorização automatizada de tarefas indica quais trabalhos relacionados realizam a Priorização de Tarefas de forma automatizada. O critério Alocação de tarefas automatizada baseada no perfil dos stakeholders informa quais trabalhos relacionados realizam alocação de tarefas de forma automatizada em projetos. O item Dashboard Multi-plataforma (Web) indica quais trabalhos relacionados possuem interface web para utilização. O item Software Livre (Open-Source) informa quais trabalhos relacionados são aplicações desenvolvidas e mantidas de forma livre.
+O quesito Interoperabilidade com sistemas de gerenciamento de projetos baseados em EAP se refere a capacidade que os trabalhos relacionados tem de realizar o processamento de arquivos gerados por tais ferramentas de gerenciamento de projetos. O critério Exportação de EAP pós-processamento se refere a exportação de um arquivo computacional padrão XML como resultado da alocação realizada pelos trabalhos apresentados. Já o item Uso de métodos estatísticos indica quais os métodos estatísticos utilizados pelos trabalhos relacionados para alocação e priorização das atividades do projeto. O item Priorização automatizada de tarefas indica quais trabalhos relacionados realizam a Priorização de Atividades de forma automatizada. O critério Alocação de tarefas automatizada baseada no perfil dos stakeholders informa quais trabalhos relacionados realizam alocação de tarefas de forma automatizada em projetos. O item Dashboard Multi-plataforma (Web) indica quais trabalhos relacionados possuem interface web para utilização. O item Software Livre (Open-Source) informa quais trabalhos relacionados são aplicações desenvolvidas e mantidas de forma livre.
 A seção 4 apresenta o modelo e a metodologia de desenvolvimento do sistema ChronosPM em relação a tecnologias, estrutura de interface e como será o fluxo de informações da aplicação.
 
 \section{ChronosPM}
@@ -127,8 +134,7 @@ A figura 1 apresenta a abordagem de alocação e priorização automatizada de taref
 \label{fig:modelotradicionalxchronos}
 \end{figure}
 
-O processo de alocação de recursos humanos em atividades de projetos de desenvolvimento de software ainda é manual e depende do conhecimento empírico do Gerente de Projetos em relação a sua equipe e a complexidade das atividades que serão desempenhadas. O ChronosPM propõe um modelo para tornar essa etapa do
-?gerenciamento de projeto mais eficaz através da alocação e priorização automatizada de recursos humanos em atividades, sendo esse o grande diferencial proposto no artigo, sendo este o diferencial proposto pelo sistema ChronosPM.
+O processo de alocação de recursos humanos em atividades de projetos de desenvolvimento de software ainda é manual e depende do conhecimento empírico do Gerente de Projetos em relação a sua equipe e a complexidade das atividades que serão desempenhadas. O ChronosPM propõe um modelo para tornar essa etapa do gerenciamento de projeto mais eficaz através da alocação e priorização automatizada de recursos humanos em atividades, sendo esse o grande diferencial proposto no artigo, sendo este o diferencial proposto pelo sistema ChronosPM.
 
 \subsection{Modelo}
 
@@ -172,7 +178,7 @@ O módulo Interface apresentado na figura 5 possui os componentes Apresentação e 
 
 No momento da importação do arquivo XML do Microsoft Office Project 2013 no ChronosPM com os dados do projeto, serão comparados os índices de habilidade necessárias com os índices de produtividade dos recursos humanos para ser calculado o índice de alocação (IA) de cada recurso em relação a atividade, que indica qual recurso mais apropriado para desempenhar tal atividade de acordo com sua produtividade nas áreas exigidas. Desta forma, todos os recursos terão um IA para as atividades do projeto. Caso não hajam índices de produtividade definidos para os recursos, será definido índice 10 para todos os recursos em todas as áreas exigidas pela atividade.
 Para definição do IA em relação a atividade de cada recurso é realizado o seguinte cálculo:
-IA= ?( IPi * IHi)
+IA= ( IPi * IHi)
 Primeiramente é feita a multiplicação dos Índices de Habilidades das atividades pelos Índices de Produtividade dos recursos humanos. Após, é realizada a soma dos valores resultantes da multiplicação definindo o IA. O valor do IA é arredondado em uma casa decimal após a vírgula.
 A representação abaixo mostra como a pontuação ajudará a definir a alocação de recursos.
 
